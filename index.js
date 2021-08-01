@@ -1,6 +1,5 @@
 // var createError = require('http-errors');
 var express = require('express');
-var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
@@ -28,8 +27,6 @@ app.use(cors());
 
 app.use(bodyParser.json({ limit: '50mb' }));
 app.use(bodyParser.urlencoded({ limit: '50mb', extended: true }));
-// view engine setup
-app.set('view engine', 'jade');
 
 app.use(logger('dev'));
 app.use(express.json());
